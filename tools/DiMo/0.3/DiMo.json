@@ -1,0 +1,19 @@
+{
+  "name": "DiMo",
+  "actions": [],
+  "is_iframe": true,
+  "edit_on_double_click": false,
+  "tool_data": {
+    "": ""
+  },
+  "url": "http://localhost:4200",
+  "public_data": {"declaration": "SATISFIABLE NQueens(n)\r\nPROPOSITIONS D\r\nPARAMETERS n: {10}\r\n",
+    "output_language": "OUTPUT\r\n    IF HASMODEL THEN\r\n\r\n        PRINT \"<table>\"\r\n\r\n        FOR  x FROM 1 TO n STEP 1 DO\r\n\r\n            PRINT \"<tr>\"\r\n\r\n            FOR y FROM 1 TO n STEP 1 DO\r\n\r\n                IF (x + y) MOD 2 = 0 THEN\r\n                    PRINT \"<th class='even' >\"\r\n                ELSE\r\n                    PRINT \"<th class='odd' >\"\r\n                ENDIF\r\n\r\n                IF D(x,y) THEN\r\n                    PRINT \"&#128081;\"\r\n                ENDIF\r\n\r\n                PRINT \"</th>\"\r\n\r\n            DONE\r\n            PRINT \"</tr>\"\r\n        DONE\r\n        PRINT \"</table>\"\r\n    ELSE\r\n        PRINT \"<p>unsatisfiable</p>\"\r\n    ENDIF\r\n\r\nAS-TYPE HTML FRONT\r\n*{\r\n                    border: 1px solid black;\r\n                    min-width: 40px;\r\n                    height: 40px;\r\n                }\r\n\r\n.even{\r\n                    background-color: black;\r\n}\r\n\r\n.odd{\r\n                    background-color: white;\r\n}\r\n\r\n"},
+  "user_data": {
+    "formula": "FORMULAS",
+    "model": ""
+  },
+  "secret_data": {
+    "": ""
+  }
+}
