@@ -1,0 +1,24 @@
+{
+  "name": "Python3",
+  "actions": [],
+  "is_iframe": true,
+  "edit_on_double_click": false,
+  "url": "http://localhost/python3/",
+  "admin_url": "http://localhost/python3/lecturer/",
+  "public_data": {
+    "template": "print('Hello World')",
+    "default_input": "",
+    "outer_var": ""
+  },
+  "user_data": {
+    "code": "",
+    "result": "",
+    "input_var": ""
+  },
+  "secret_data": {
+    "": ""
+  },
+  "tool_data": {
+    "": ""
+  }
+}

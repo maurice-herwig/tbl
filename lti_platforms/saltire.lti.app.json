@@ -1,0 +1,12 @@
+{
+  "issuer": "https://saltire.lti.app/platform",
+  "default": true,
+  "client_id": "saltire.lti.app",
+  "auth_login_url": "https://saltire.lti.app/platform/auth",
+  "auth_token_url": "https://saltire.lti.app/platform/token/f2036bb24bb1e6bc12bc594c87f2c866",
+  "key_set_url": "https://saltire.lti.app/platform/jwks/f2036bb24bb1e6bc12bc594c87f2c866",
+  "key_set": null,
+  "deployment_ids": [
+    "cLWwj9cbmkSrCNsckEFBmA"
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "name": "WoFA",
+  "actions": [
+    {
+      "name": "authorization",
+      "url": "http://localhost:8080/o/token/",
+      "body_values": {
+        "client_id": [
+          [
+            "tool_data",
+            "client_id"
+          ]
+        ],
+        "client_secret": [
+          [
+            "tool_data",
+            "client_secret"
+          ]
+        ],
+        "grant_type": [
+          "client_credentials"
+        ]
+      },
+      "header_values": {},
+      "result_values": {
+        "access_token": [
+          "tool_data",
+          "access_token"
+        ],
+        "expires_in": [
+          "tool_data",
+          "expires_in"
+        ],
+        "token_type": [
+          "tool_data",
+          "token_type"
+        ]
+      },
+      "http_method": "POST"
+    },
+    {
+      "name": "create_one_symbol_automaton",
+      "url": "http://localhost:8080/fa/create/",
+      "body_values": {
+        "type": [
+          "one_symbol"
+        ],
+        "alphabet": [
+          [
+            "public_data",
+            "alphabet"
+          ]
+        ],
+        "letter": [
+          [
+            "user_data",
+            "letter"
+          ]
+        ]
+      },
+      "header_values": {
+        "Authorization": [
+          [
+            "tool_data",
+            "token_type"
+          ],
+          " ",
+          [
+            "tool_data",
+            "access_token"
+          ]
+        ]
+      },
+      "result_values": {
+        "result_automaton": [
+          "user_data",
+          "result_automaton"
+        ]
+      },
+      "http_method": "POST",
+      "Content-Type": "application/json"
+    },
+    {
+      "name": "weight",
+      "url": "http://localhost:8080/wofa/weight/",
+      "body_values": {
+        "automaton": [
+          [
+            "user_data",
+            "automaton_1"
+          ]
+        ]
+      },
+      "header_values": {
+        "Authorization": [
+          [
+            "tool_data",
+            "token_type"
+          ],
+          " ",
+          [
+            "tool_data",
+            "access_token"
+          ]
+        ]
+      },
+      "result_values": {
+        "weight": [
+          "user_data",
+          "weight"
+        ]
+      },
+      "http_method": "POST",
+      "Content-Type": "application/json"
+    },
+    {
+      "name": "grading_weight",
+      "url": "http://localhost:8080/wofa/grading/weight/",
+      "body_values": {
+        "automaton_2": [
+          [
+            "user_data",
+            "automaton_1"
+          ]
+        ],
+        "automaton_1": [
+          [
+            "secret_data",
+            "solution"
+          ]
+        ],
+        "max_points": [
+          [
+            "public_data",
+            "max_points"
+          ]
+        ],
+        "linear_displacement": [
+          [
+            "secret_data",
+            "linear_displacement"
+          ]
+        ]
+      },
+      "header_values": {
+        "Authorization": [
+          [
+            "tool_data",
+            "token_type"
+          ],
+          " ",
+          [
+            "tool_data",
+            "access_token"
+          ]
+        ]
+      },
+      "result_values": {
+        "points": [
+          "user_data",
+          "points"
+        ]
+      },
+      "http_method": "POST",
+      "Content-Type": "application/json"
+    }
+  ],
+  "is_iframe": false,
+  "tool_data": {
+    "client_id": "",
+    "client_secret": "",
+    "access_token": "",
+    "token_type": "",
+    "expires_in": 0
+  },
+  "public_data": {
+    "max_points": 10,
+    "template": {
+      "type": "txt",
+      "value": "input_alphabet = a, b \n\nstart_states = 0 \n\ntransitions = 0,a -> 1 \n  1,b -> 0 \n\nacc_states = 0,1 \n"
+          },
+    "alphabet": [
+      "a",
+      "b"
+    ]
+  },
+  "user_data": {
+    "automaton_1": {
+      "type": "txt",
+      "value": ""
+          },
+    "automaton_2": {},
+    "word": "",
+    "false_word": "",
+    "result": true,
+    "result_automaton": {},
+    "letter": "a",
+    "weight": 0.0,
+    "points": 0.0
+  },
+  "secret_data": {
+    "solution": {
+      "type": "txt",
+      "value": "input_alphabet = a, b \n\nstart_states = 0 \n\ntransitions = 0,a -> 1 \n  1,b -> 0 \n\nacc_states = 0,1 \n"
+          },
+    "linear_displacement": 5,
+    "containing_words": [],
+    "not_included_words": []
+  }
+}

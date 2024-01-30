@@ -1,0 +1,35 @@
+{
+      "name": "MiniPY",
+      "actions": [],
+      "is_iframe": true,
+      "edit_on_double_click": false,
+      "tool_data": {
+        "": ""
+      },
+      "url": "http://localhost:4200/",
+      "admin_url": "http://localhost:4200/",
+      "public_data": {
+        "": ""
+      },
+      "user_data": {
+        "code": "while x1 !=0:\n    x1-=1\n    x2+=1\n$add(x1,x2)",
+        "macros": "#Add Function\n$add(X,Y){\n    while X!=0:\n        X-=1\n        Y+=1\n}",
+        "program": "",
+        "input_vars": "x1,x2",
+        "output_vars": "x1,x2",
+        "values": [
+          {
+            "variable": "x1",
+            "value": 0
+          },
+          {
+            "variable": "x2",
+            "value": 0
+          }
+        ],
+        "result": ""
+      },
+      "secret_data": {
+        "": ""
+      }
+    }

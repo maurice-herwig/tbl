@@ -1,0 +1,21 @@
+{
+  "name": "Calculator",
+  "actions": [],
+  "is_iframe": true,
+  "edit_on_double_click": false,
+  "tool_data": {
+    "": ""
+  },
+  "url": "http://localhost:4200",
+  "public_data": {
+    "number_1": 1,
+    "number_2": 2,
+    "arithmetic_operation": "addition"
+  },
+  "user_data": {
+    "": ""
+  },
+  "secret_data": {
+    "": ""
+  }
+}

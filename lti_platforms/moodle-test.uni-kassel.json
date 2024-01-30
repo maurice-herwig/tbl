@@ -1,0 +1,13 @@
+{
+  "issuer": "https://moodle-test.uni-kassel.de",
+  "default": true,
+  "client_id": "WCM4hayjB6PabEE",
+  "auth_login_url": "https://moodle-test.uni-kassel.de/mod/lti/auth.php",
+  "auth_token_url": "https://moodle-test.uni-kassel.de/mod/lti/token.php",
+  "auth_audience": null,
+  "key_set_url": "https://moodle-test.uni-kassel.de/mod/lti/certs.php",
+  "key_set": null,
+  "deployment_ids": [
+    "1"
+  ]
+}
